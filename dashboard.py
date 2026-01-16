@@ -10,7 +10,7 @@ st.title("🏥HOSPITAL OPERATIONS & CLAIMS ANALYTICS DASHBOARD")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:\\Users\\wilson\\Desktop\\hospital_data.csv")
+   df = pd.read_csv("hospital_data.csv")
     df["CLAIM_DATE"] = pd.to_datetime(df["CLAIM_DATE"], errors="coerce", dayfirst=True)
     return df
 
@@ -79,3 +79,4 @@ st.pyplot(fig3)
 # Data table
 st.subheader("Filtered Dataset")
 st.dataframe(filtered_df)
+
